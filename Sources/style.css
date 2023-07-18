@@ -1,0 +1,249 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #e3f2fd;
+}
+
+.navbar {
+    height: 65px;
+    width: 100%;
+    max-width: 100em;
+    padding: 3.13em 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0em;
+    padding-left: 0em;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-wrap {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.menu-icon {
+    display: none;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.menu div {
+    padding: 15px;
+    position: relative;
+}
+
+.menu span {
+    padding: 1.5px 0 0 0;
+    background: #000;
+    width: 75%;
+    height: 2px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s, width 0.5s;
+}
+
+.menu .line-1 {
+    transform: translate(-50%, -8px);
+}
+
+.menu .line-3 {
+    transform: translate(-50%, 5.5px);
+}
+
+.openmenu .line-1 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.openmenu .line-3 {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.openmenu .line-2 {
+    width: 0;
+}
+
+.logo-txt {
+    color: #333;
+    font-size: 1.375rem;
+    font-weight: 500;
+}
+
+.sidebar-wrap {
+    display: flex;
+}
+
+.sidebar-list {
+    display: flex;
+    padding: 15px;
+}
+
+.sidebar-list-extension {
+    padding: 15px;
+}
+
+.sidebar-list-item {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.sidebar-list-item .nav-link {
+    text-decoration: none;
+}
+
+.sidebar-list-item .link-icon {
+    display: none;
+}
+
+.sidebar-list-item .link-txt {
+    font-size: 1.1rem;
+    display: inline-block;
+    position: relative;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar-list-item .link-txt::after {
+    display: flex;
+    content: '';
+    position: absolute;
+    width: 75%;
+    transform: scaleX(0);
+    height: 2px;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.sidebar-list-item .link-txt:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.sidebar-list-extension .link-txt::after {
+    display: none !important;
+}
+
+.sidebar-list-extension .nav-link {
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid #4070f4;
+}
+
+/* Hero Section */
+
+.hero-wrap {
+    max-width: 100em;
+    padding-top: 3.13em;
+    padding-bottom: 3.13em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0em;
+    padding-left: 0em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    align-items: center;
+}
+
+.hero-header h1 {
+    text-align: left;
+    font-size: 4.063rem;
+    color: #26203a;
+}
+
+.hero-header span {
+    color: #4070f4;
+    font-size: 4.063rem;
+}
+
+.hero-cta-btn {
+    border: none;
+    padding: 15px;
+    width: 200px;
+    margin-top: 50px;
+    font-size: 1.563rem;
+    font-weight: 500;
+    background: #26203a;
+    color: #e3f2fd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+.hero-cta-btn:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.hero-svg-container {
+    width: 50rem;
+    height: 50rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.hero-svg-container svg {
+    width: 50rem;
+    height: 50rem;
+}
+
+.hero-svg-container svg rect {
+    width: 29.213rem;
+    height: 27.38rem;
+}
+
+/* Responsive Styling */
+
+@media (max-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+    .menu-icon {
+        display: flex;
+    }
+    .sidebar-wrap {
+        display: none;
+    }
+    .hero-wrap {
+        flex-direction: column;
+    }
+    .hero-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-header h1 {
+        text-align: center;
+        font-size: 2.0315rem;
+    }
+    .hero-header span {
+        font-size: 2.0315rem;
+    }
+}
