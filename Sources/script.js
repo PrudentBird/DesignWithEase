@@ -1,5 +1,6 @@
 const menuBtn = document.querySelector(".menu-icon"),
       navBar = document.querySelector(".navbar"),
+      navBarWrap = document.querySelector(".navbar-wrap"),
       navLinks = document.querySelectorAll(".nav-link"),
       overlay = document.querySelector(".overlay"),
       darkModeToggle = document.querySelector(".dark-mode"),
@@ -25,8 +26,10 @@ darkModeToggle.addEventListener("click", () => {
 function handleScroll() {
     if (window.scrollY > 0) {
         navBar.classList.add('navbar-shadow');
+        navBarWrap.classList.add('navbar-padding');
     } else {
         navBar.classList.remove('navbar-shadow');
+        navBarWrap.classList.remove('navbar-padding');
     }
 }
 
