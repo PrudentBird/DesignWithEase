@@ -3,7 +3,8 @@ const menuBtn = document.querySelector(".menu-icon"),
       navBarWrap = document.querySelector(".navbar-wrap"),
       navLinks = document.querySelectorAll(".nav-link"),
       overlay = document.querySelector(".overlay"),
-      darkModeToggle = document.querySelector(".dark-mode"),
+      darkModeToggle = document.querySelectorAll(".dark-mode"),
+      themeIconToggle = document.querySelector(".toggle-icon"),
       htmlController = document.querySelector("html");
 
 const toggleMenu = () => {
@@ -18,10 +19,13 @@ navLinks.forEach((navLink) => {
     navLink.addEventListener("click", toggleMenu);
 });
 
-darkModeToggle.addEventListener("click", () => {
-    htmlController.classList.toggle("dark");
+darkModeToggle.forEach((darkMode) => {
+    darkMode.addEventListener("click", () => {
+        htmlController.classList.toggle("dark");
+        themeIconToggle.classList.toggle("bxs-sun");
+        themeIconToggle.classList.toggle("bxs-moon");
+    });
 });
-
 
 function handleScroll() {
     if (window.scrollY > 0) {
