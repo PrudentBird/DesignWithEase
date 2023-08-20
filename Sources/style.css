@@ -54,7 +54,7 @@ body {
 }
 
 .dark .navbar {
-    background-color: #2d2e35;
+    background-color: #1c1e21;
 }
 
 .navbar-shadow {
@@ -62,8 +62,8 @@ body {
 }
 
 .dark .navbar-shadow {
-    background-color: #1e1f27;
-}
+    background-color: #1c1e21;
+}   
 
 .navbar-wrap {
     width: 100%;
@@ -483,7 +483,7 @@ body {
 .callout-heading-h6 h6 {
     font-weight: 600;
     font-size: 48px;
-    color: #000;
+    color: #26203a;
     line-height: 1.2em;
 }
 
@@ -502,7 +502,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5em;
-    color: #62626d;
+    color: #26203a;
 }
 
 .dark .callout-heading-p p {
@@ -577,7 +577,7 @@ body {
 .cta-btn-two {
     width: 100%;
     text-decoration: none;
-    color: rgb(18 19 21);
+    color: #26203a;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -626,7 +626,7 @@ body {
 }
 
 .dark .footer-wrap svg {
-    fill: #1e1f27;
+    fill: #1c1e21;
 }
 
 .footer-bg-wrap {
@@ -634,7 +634,7 @@ body {
     background-color: #26203a;
 }
 .dark .footer-bg-wrap {
-    background-color: #1e1f27;
+    background-color: #1c1e21;
 }
 
 .footer-content {
