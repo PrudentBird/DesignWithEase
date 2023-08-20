@@ -38,3 +38,48 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
+
+const cards = document.querySelectorAll('.discover-slick-card');
+let currentIndex = 0;
+let intervalId; // Variable to hold the interval ID
+
+function showCard(index) {
+  cards[currentIndex].style.display = 'none';
+  currentIndex = index % cards.length;
+  cards[currentIndex].style.display = 'block';
+}
+
+function startAutoSlide() {
+  intervalId = setInterval(() => {
+    showCard(currentIndex + 1);
+  }, 3000);
+}
+
+function stopAutoSlide() {
+  clearInterval(intervalId);
+}
+
+// Show the first card immediately when the page loads
+showCard(currentIndex);
+
+// Start the automatic slideshow after a delay
+setTimeout(() => {
+  startAutoSlide();
+}, 3000); // Delay of 3 seconds
+
+// Check if the media query matches
+const mediaQuery = window.matchMedia('(max-width: 768px)');
+if (mediaQuery.matches) {
+  startAutoSlide(); // Start the automatic slideshow
+} else {
+  stopAutoSlide(); // Stop the slideshow if the media query doesn't match
+}
+
+// Listen for changes in the media query and adjust the slideshow accordingly
+mediaQuery.addListener((mq) => {
+  if (mq.matches) {
+    startAutoSlide();
+  } else {
+    stopAutoSlide();
+  }
+});
