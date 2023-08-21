@@ -151,6 +151,27 @@ body {
     display: none;
 }
 
+.discover-nav-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.discover-nav-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.discover-nav-icon i {
+    font-size: 1.5rem;
+    color: #26203a;
+}
+
+.dark .discover-nav-icon i {
+    color: #fff;
+}
+
 .sidebar-content {
     display: flex;
 }
@@ -738,15 +759,16 @@ body {
     .menu-wrap {
         z-index: 100;
         margin: 24px 24px;
+        justify-content: space-between;
     }
 
     .openmenu .menu-wrap {
         margin-top: 40px;
+        justify-content: unset;
     }
 
     .menu-icon {
         display: flex;
-        margin-right: 10px;
     }
 
     .openmenu .menu-icon {
@@ -772,6 +794,14 @@ body {
 
     .dark .openmenu .logo-txt-short {
         color: #fff;
+    }
+
+    .discover-nav-icon {
+        display: flex;
+    }
+
+    .openmenu .discover-nav-icon {
+        display: none;
     }
 
     .openmenu .sidebar-wrap {
