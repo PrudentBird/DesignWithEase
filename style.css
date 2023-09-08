@@ -265,50 +265,84 @@ body {
     align-items: center;    
 }
 
+.hero-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .hero-header h1 {
     text-align: left;
     font-size: 4.063rem;
     color: #26203a;
+    margin-bottom: 50px;
 }
 
 .dark .hero-header h1 {
     color: #fff;
 }
 
-.hero-header span {
+.hero-header-color {
     color: #4070f4;
     font-size: 4.063rem;
 }
 
-.dark .hero-header span {
+.dark .hero-header-color {
     color: #8d89ff;
 }
 
 .hero-cta-btn {
     border: none;
-    padding: 15px;
+    padding: 16px 26px;
     width: 200px;
-    margin-top: 50px;
-    font-size: 1.563rem;
-    font-weight: 500;
+    height: 100%;
+    margin: auto;
     background: #26203a;
-    color: #e3f2fd;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition-duration: 0.3s;
-    transition-property: box-shadow, transform;
-}
-
-.dark .hero-cta-btn {
-    color: #000;
-    background: #8d89ff;
+    display: flex;
+    align-items: center;
+    transition-duration: .5s;
 }
 
 .hero-cta-btn:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
+    background: #383248;
+}
+
+.dark .hero-cta-btn {
+    background: #8d89ff;
+}
+
+.hero-cta-btn-content {
+    display: flex;
+    align-items: center;
+}
+
+.hero-cta-btn-text {
+    color: #e3f2fd;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.dark .hero-cta-btn-text {
+    color: #000;
+}
+
+.hero-cta-btn-icon {
+    margin-top: 3px;
+    color: #e3f2fd;
+    font-size: 11px;
+    margin-left: 6px;
+    transition-duration: 0.3s;
+}
+
+.dark .hero-cta-btn-icon {
+    color: #000;
+}
+
+.hero-hover {
+    margin-left: 12px;
 }
 
 .hero-img-container {
@@ -953,14 +987,16 @@ body {
         font-size: 2rem;
         max-width: 100%;
         padding: 1rem;
+        margin-bottom: 25px;
     }
 
-    .hero-header span {
+    .hero-header-color {
         font-size: 2rem;
     }
 
     .hero-cta-btn {
-        margin-top: 25px;
+        width: 100%;
+        padding: 14px 22px;
     }
 
     .hero-img-container {

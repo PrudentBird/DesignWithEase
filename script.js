@@ -3,6 +3,8 @@ const menuBtn = document.querySelector(".menu-icon"),
       navBarWrap = document.querySelector(".navbar-wrap"),
       navLinks = document.querySelectorAll(".nav-link"),
       overlay = document.querySelector(".overlay"),
+      ctaBtn = document.querySelector(".hero-cta-btn"),
+      ctaBtnIcon = document.querySelector(".hero-cta-btn-icon"),
       darkModeToggle = document.querySelectorAll(".dark-mode"),
       themeIconToggle = document.querySelector(".toggle-icon"),
       htmlController = document.querySelector("html");
@@ -17,6 +19,13 @@ menuBtn.addEventListener("click", toggleMenu);
 overlay.addEventListener("click", toggleMenu);
 navLinks.forEach((navLink) => {
     navLink.addEventListener("click", toggleMenu);
+});
+
+ctaBtn.addEventListener("mouseover", () => {
+    ctaBtnIcon.classList.add("hero-hover");
+});
+ctaBtn.addEventListener("mouseleave", () => {
+    ctaBtnIcon.classList.remove("hero-hover");
 });
 
 darkModeToggle.forEach((darkMode) => {
